@@ -97,19 +97,13 @@ if "stock_data" in st.session_state and not st.session_state["stock_data"].empty
     st.plotly_chart(fig)
 
 
-
-
-
-
-
-
-
     # Display historical data
     st.subheader('Historical Data')
     st.dataframe(data[['Open', 'High', 'Low', 'Close', 'Volume']])
 
     load_dotenv()
     api_key = os.getenv("GEMINI_API_KEY")
+    api_key = st.secrets["GEMINI_API_KEY"]
     if not api_key:
         raise ValueError("No API key found. Please set the GEMINI_API_KEY environment variable.")
 
