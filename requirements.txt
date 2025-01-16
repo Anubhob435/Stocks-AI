@@ -1,0 +1,8 @@
+streamlit
+yfinance==0.2.40
+pandas
+plotly
+python-dotenv
+google-generativeai
+kaleido
+ta
